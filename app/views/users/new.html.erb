@@ -1,7 +1,11 @@
 <%= form_for @user, url: {action: "create"} do |f| %>
-  <%= f.text_field(:username) %>
-  <%= f.text_field(:email) %>
-  <%= f.text_field(:password) %>
+  <%= f.label :name, "Yer Name" %>
+  <%= f.text_field :username, placeholder: "Pugwash"  %><br/>
+  <%= f.label :email %>
+  <%= f.text_field :email, value: "pugwash@blackpig.com" %><br/>
+  <%= f.label :password %>
+  <%= f.password_field :password %><br/>
+  <%= f.submit("Submit") %>
 <% end %>
 
 
